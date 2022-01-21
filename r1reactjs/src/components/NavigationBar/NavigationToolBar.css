@@ -1,35 +1,42 @@
 .navigationPrimaryBackground {
-    background: #0d111c !important;
-    color: #ffffff;
+    background: #211522;
+    color: #FFFFFF;
 }
 .navigationBrand {
-    color: #cbb9fa;
+    color: #D3B1C2;
     font-weight: 400;
     font-size: 24px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .navigationText {
-    color: #ffffff;
+    color: #FFFFFF;
     font-weight: 600;
 }
 .navigationText:active {
-    color: #2c5afe;
+    color: #C197D2;
 }
 .navigationText:hover {
-    color: #2c5afe;
+    color: #C197D2;
 }
 .navigationContactButtonBackground {
-    background: #2c5afe;
-    color: #ffffff;
+    background: #D3B1C2;
+    color: #211522;
     font-weight: 600;
 
 }
 .navigationContactButtonBackground:hover {
-    background: #ffffff;
-    color: #0d111c;
+    background: #FFFFFF;
+    color: #211522;
 }
 .btn:focus,.btn:active {
     size: 50%;
     outline: none !important;
     box-shadow: none;
  }
+ /*
+    Primary Dark: #211522
+    Primary Light: #D3B1C2
+    Secondary Dark: ##613659
+    Secondary Light: #C197D2
+    Complimentary: #FFFFFF
+    Complimentary: #000000
+ */

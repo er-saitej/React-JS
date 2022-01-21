@@ -3,7 +3,7 @@ import NavigationToolBar from './NavigationBar/NavigationToolBar';
 
 const Root = () => {
   return (
-    <div>
+    <div className="rootStyles">
         <NavigationToolBar />
     </div>);
 };
