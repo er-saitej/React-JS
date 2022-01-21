@@ -1,0 +1,16 @@
+.rootBackgroundColor {
+    color: #0d111c;
+}
+.rootTextColor {
+    color: #2c5afe;
+}
+.rootWhite {
+    color: #ffffff;
+}
+.rootButtonBackground {
+    color: #2c5bfe;
+}
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
