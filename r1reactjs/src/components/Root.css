@@ -9,3 +9,13 @@
 .rootStyles {
     font-family: 'Roboto', sans-serif;
 }
+@media (min-width: 992px) {
+    .rootMobile {
+        display: none;
+    }
+}
+@media (max-width: 992px) {
+    .rootDesktop {
+        display: none;
+    }
+}

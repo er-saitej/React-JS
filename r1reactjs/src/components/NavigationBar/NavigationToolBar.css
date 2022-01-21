@@ -32,6 +32,9 @@
     outline: none !important;
     box-shadow: none;
  }
+ .mobileConnectText {
+     font-size: 70%;
+ }
  /*
     Primary Dark: #211522
     Primary Light: #D3B1C2
