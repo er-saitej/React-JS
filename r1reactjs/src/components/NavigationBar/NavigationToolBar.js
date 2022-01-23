@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { navigationLinks } from './NavigationLinks';
 import { ArrowDownCircle } from 'react-feather';
 import { ArrowUpCircle } from 'react-feather';
 import { MessageCircle } from 'react-feather';
@@ -9,6 +10,7 @@ import '../Root.css';
 const NavigationToolBar = () => {
   const pageHeader = "Sai Tej Sunkara";
   let [ arrowDown, setArrowDown ] = useState(true);
+  let navigationItems = navigationLinks;
   let toggleArrowDown = () => {
     setArrowDown(!arrowDown);
   }
@@ -36,9 +38,9 @@ const NavigationToolBar = () => {
             </span>
             <div className="collapse navbar-collapse ms-auto order-lg-3" id="navbarCollapse">
               <ul className="navbar-nav mb-lg-0 ms-auto me-auto">
-                <li className="nav-item mx-0 mx-lg-5 my-2 my-lg-0 navigationText clickableObject">Home</li>
-                <li className="nav-item mx-0 mx-lg-5 my-2 my-lg-0 navigationText clickableObject">Projects</li>
-                <li className="nav-item mx-0 mx-lg-5 my-2 my-lg-0 navigationText clickableObject">Experience</li>
+                {navigationItems.map((link)=>(
+                  <li key={link.id} className="nav-item mx-0 mx-lg-5 my-2 my-lg-0 navigationText clickableObject">{link.heading}</li>
+                ))}
               </ul>
             </div>
         </div>
