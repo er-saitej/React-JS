@@ -7,8 +7,8 @@ import { MessageCircle } from 'react-feather';
 import './NavigationToolBar.css';
 import '../Root.css';
 
-const NavigationToolBar = () => {
-  const pageHeader = "Sai Tej Sunkara";
+const NavigationToolBar = (props) => {
+  const pageHeader = props.headingBrand;
   let [ arrowDown, setArrowDown ] = useState(true);
   let navigationItems = navigationLinks;
   let toggleArrowDown = () => {

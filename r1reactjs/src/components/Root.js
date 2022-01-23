@@ -5,7 +5,7 @@ import PracticalScript from './PracticalScript/PracticalScript';
 const Root = () => {
   return (
     <div className="rootStyles">
-        <NavigationToolBar /><br />
+        <NavigationToolBar headingBrand="Sai Tej Sunkara" /><br />
         <PracticalScript />
     </div>);
 };
