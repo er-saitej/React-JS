@@ -4,6 +4,7 @@ import { navigationLinks } from './NavigationLinks';
 import { ArrowDownCircle } from 'react-feather';
 import { ArrowUpCircle } from 'react-feather';
 import { MessageCircle } from 'react-feather';
+import { TrinityRingsSpinner } from 'react-epic-spinners';
 import './NavigationToolBar.css';
 import '../Root.css';
 
@@ -17,7 +18,8 @@ const NavigationToolBar = (props) => {
   return (
     <nav className="navbar navbar-expand-lg fixed-top navigationPrimaryBackground">
         <div className="container">
-            <span className="navbar-brand navigationBrand clickableObject order-lg-1">{pageHeader}</span>
+            <span className="rootDesktop"><TrinityRingsSpinner size="35" animationDuration={5000} color="#D3B1C2" /></span>
+            <span className="navbar-brand navigationBrand clickableObject order-lg-1 ms-0 ms-lg-2">{pageHeader}</span>
             <div className='ms-auto me-auto order-lg-4'>
               <ul className="navbar-nav mb-lg-0 ms-auto me-auto">
                   <li className="nav-item mx-lg-5 my-2 my-lg-0 navigationText ms-auto me-auto ms-lg-0 me-lg-0">
