@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { ArrowDownCircle } from 'react-feather';
 import { ArrowUpCircle } from 'react-feather';
 import { MessageCircle } from 'react-feather';
@@ -7,7 +8,10 @@ import '../Root.css';
 
 const NavigationToolBar = () => {
   const pageHeader = "Sai Tej Sunkara";
-  let isArrowDown = false;
+  let [ arrowDown, setArrowDown ] = useState(true);
+  let toggleArrowDown = () => {
+    setArrowDown(!arrowDown);
+  }
   return (
     <nav className="navbar navbar-expand-lg fixed-top navigationPrimaryBackground">
         <div className="container">
@@ -25,9 +29,9 @@ const NavigationToolBar = () => {
                 </ul>
             </div>
             <span className="navbar-toggler order-lg-2" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>toggleArrowDown()}>
                {
-                 isArrowDown?<ArrowUpCircle />:<ArrowDownCircle />
+                 arrowDown?<ArrowDownCircle />:<ArrowUpCircle />
                }
             </span>
             <div className="collapse navbar-collapse ms-auto order-lg-3" id="navbarCollapse">
