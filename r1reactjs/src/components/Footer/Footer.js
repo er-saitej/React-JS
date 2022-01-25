@@ -8,17 +8,18 @@ import './Footer.css';
 
 const Footer = () => {
   let autoFocusReference = useRef();
-  let [name, setName] = useState('');
-  let [email, setEmail] = useState('');
-  let [message, setMessage] = useState('');
+  let initialHandShakeFormValues = {
+      name: '',
+      email: '',
+      message: ''
+  }
+  let [handShakeForm, setHandShakeForm] = useState(initialHandShakeFormValues);
   let socialContacts = socialContactItems;
   let handleContactFormSubmit = (e) => {
       e.preventDefault();
       let formValues = e.target[0].value;
       console.log(formValues);
-      setName('');
-      setEmail('');
-      setMessage('');
+      setHandShakeForm(initialHandShakeFormValues);
   }
   let getFullYear = () => {
     const date = new Date();  
@@ -30,11 +31,11 @@ const Footer = () => {
             <article className='py-3'>
                 <div className="row">
                     <div className="col-12 col-lg-6 order-2 order-lg-1">
-                        <section className="px-3 py-1 mb-2 jumbotronBackground rounded-3">
+                        <section className="px-3 py-1 mb-2 jumbotronBackground rounded-3 text-center">
                             <span className="mailHeading">Drop a Handshake</span>
                         </section>
                         <section className="px-3 py-3 jumbotronBackground rounded-3">
-                            <HandShakeMessageForm name={name} setName={setName} email={email} setEmail={setEmail} message={message} setMessage={setMessage} handleFormSubmit={handleContactFormSubmit} autoFocusReference={autoFocusReference} />
+                            <HandShakeMessageForm handShakeForm={handShakeForm} setHandShakeForm={setHandShakeForm} handleFormSubmit={handleContactFormSubmit} autoFocusReference={autoFocusReference} />
                         </section>
                     </div>
                     <div className="col-12 col-lg-6 order-1 order-lg-2">
@@ -56,12 +57,14 @@ const Footer = () => {
                     </div>
                 </div>
             </article>
-            <article className='py-3 text-center setBorderTop'>
+        </section>
+        <div className='mt-3 py-3 text-center setBorderTop'>
+            <section className="container">
                 <span>Designed and developed by Sai Tej Sunkara.</span>
                 <div className="rootMobile"></div>
                 <span> &copy; {getFullYear()} </span>
-            </article>
-        </section>
+            </section>
+        </div>
     </div>
   );
 };
