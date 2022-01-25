@@ -1,0 +1,42 @@
+.footerPrimaryBackground {
+    background: #211522;
+    color: #FFFFFF;
+}
+.footerPrimaryHeight {
+    min-height: 60vh;
+}
+.jumbotronBackground {
+    background: #D3B1C2;
+    color: #211522;
+}
+.mailHeading {
+    font-size: 28px;
+}
+.iconStyle {
+    width: 3rem;
+    height: 3rem;
+}
+.socialConnectPrimaryText {
+    font-size: 18px;
+}
+.socialConnectSecondaryText {
+    font-size: 14px;
+}
+.socialConnectText:hover, .socialConnectText:hover {
+    color: #C197D2;
+}
+.socialContactsHeading {
+    font-size: 28px;
+    color: #D3B1C2;
+}
+.setBorderTop {
+    border-top: 1px solid;
+}
+@media (max-width: 992px) {
+    .socialConnectText {
+        font-size: 14px;
+    }
+    .footerPrimaryHeight {
+        min-height: 80vh;
+    }
+}

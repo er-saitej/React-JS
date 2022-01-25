@@ -1,0 +1,6 @@
+
+.btn:focus,.btn:active {
+    size: 50%;
+    outline: none !important;
+    box-shadow: none;
+ }

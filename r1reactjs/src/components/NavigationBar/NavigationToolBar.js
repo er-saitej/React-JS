@@ -24,10 +24,10 @@ const NavigationToolBar = (props) => {
               <ul className="navbar-nav mb-lg-0 ms-auto me-auto">
                   <li className="nav-item mx-lg-5 my-2 my-lg-0 navigationText ms-auto me-auto ms-lg-0 me-lg-0">
                         <button type="button" className="btn navigationContactButtonBackground rootDesktop">
-                          <span className="px-0 px-lg-5">Connect</span>
+                          <span className="px-0 px-lg-5">Contact</span>
                         </button>
                         <span className="navbar-toggler rootMobile clickableObject">
-                          <MessageCircle /><span className="mobileConnectText ms-1 navigationText clickableObject">Connect</span>
+                          <MessageCircle /><span className="mobileConnectText ms-1 navigationText clickableObject">Contact</span>
                         </span>
                   </li>
                 </ul>
@@ -51,7 +51,7 @@ const NavigationToolBar = (props) => {
 };
 
 NavigationToolBar.defaultProps = {
-  headingBrand: "Sai Tej Sunkara Portfolio"
+  headingBrand: "Portfolio"
 }
 
 export default NavigationToolBar;
