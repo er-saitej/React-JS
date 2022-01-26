@@ -30,7 +30,8 @@ const Footer = () => {
         <section className="container">
             <article className='py-3'>
                 <div className="row">
-                    <div className="col-12 col-lg-6 order-2 order-lg-1">
+                    <div className="col-0 col-lg-1"></div>
+                    <div className="col-12 col-lg-4 order-2 order-lg-1">
                         <section className="px-3 py-1 mb-2 jumbotronBackground rounded-3 text-center">
                             <span className="mailHeading">Drop a Handshake</span>
                         </section>
@@ -38,7 +39,8 @@ const Footer = () => {
                             <HandShakeMessageForm handShakeForm={handShakeForm} setHandShakeForm={setHandShakeForm} handleFormSubmit={handleContactFormSubmit} autoFocusReference={autoFocusReference} />
                         </section>
                     </div>
-                    <div className="col-12 col-lg-6 order-1 order-lg-2">
+                    <div className="col-0 col-lg-1 order-lg-2"></div>
+                    <div className="col-12 col-lg-6 order-1 order-lg-3">
                         <section className="p-3 rounded-3">
                             <span className="socialContactsHeading">Connect Socially!</span>
                             <div className="row">
