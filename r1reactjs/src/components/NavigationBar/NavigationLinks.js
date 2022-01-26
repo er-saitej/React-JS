@@ -15,3 +15,7 @@ export let navigationLinks =  [
       routeLink: '/experience'
     }
 ];
+
+export let getNavigationToolbarData = {
+  url: 'http://localhost:3500/navigationLinks'
+}

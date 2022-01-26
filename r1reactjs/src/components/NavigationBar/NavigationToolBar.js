@@ -1,20 +1,39 @@
 import React from 'react';
 import { useState } from 'react';
-import { navigationLinks } from './NavigationLinks';
+import { navigationLinks, getNavigationToolbarData } from './NavigationLinks';
 import { ArrowDownCircle } from 'react-feather';
 import { ArrowUpCircle } from 'react-feather';
 import { MessageCircle } from 'react-feather';
 import { TrinityRingsSpinner } from 'react-epic-spinners';
 import './NavigationToolBar.css';
 import '../Root.css';
+import { useEffect } from 'react/cjs/react.development';
 
 const NavigationToolBar = (props) => {
   const pageHeader = props.headingBrand;
   let [ arrowDown, setArrowDown ] = useState(true);
-  let navigationItems = navigationLinks;
+  let [navigationItems, setNavigationItems] = useState(navigationLinks); // Directly data taking from js
   let toggleArrowDown = () => {
     setArrowDown(!arrowDown);
   }
+  useEffect(()=>{
+    const fetchNavigationLinks = async () => { // If navigation links come from server
+      try {
+        let response = await fetch(getNavigationToolbarData.url);
+        if(!response.ok) throw Error('Navigation links data is being updated');
+        else {
+          response = await response.json();
+          if(response.length) setNavigationItems(response);
+          else setNavigationItems(navigationLinks);
+        }
+      }
+      catch(error) {
+        console.log(error.stack);
+        setNavigationItems(navigationLinks);
+      }
+    }
+    fetchNavigationLinks();
+  }, [])
   return (
     <nav className="navbar navbar-expand-lg fixed-top navigationPrimaryBackground">
         <div className="container">
