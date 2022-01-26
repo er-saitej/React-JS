@@ -16,6 +16,6 @@ export let navigationLinks =  [
     }
 ];
 
-export let getNavigationToolbarData = {
-  url: 'http://localhost:3500/navigationLinks'
-}
+// export let getNavigationToolbarData = {
+//   url: 'http://localhost:3500/navigationLinks'
+// }
