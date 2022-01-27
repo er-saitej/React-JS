@@ -1,0 +1,38 @@
+.home {
+    min-height: 150vh;
+}
+.homeBanner {
+    background: #211522;
+    color: #FFFFFF;
+    min-height: 100vh;
+}
+.helloText {
+    color: #D3B1C2;
+    font-size: 90px;
+}
+.typeText {
+    color: #D3B1C2;
+    font-size: 32px;
+}
+.typeTextSmall {
+    color: #FFFFFF;
+    font-size: 24px;
+}
+.homeBannerImage {
+    height:50vh;
+    width: 40vw;
+}
+@media (max-width: 992px) {
+    .homeBannerImage {
+        height:30vh;
+        width: 85vw;
+    }
+}
+@media (max-width: 768px) {
+    .typeText {
+        font-size: 22px;
+    }
+    .typeTextSmall {
+        font-size: 18px;
+    }
+}

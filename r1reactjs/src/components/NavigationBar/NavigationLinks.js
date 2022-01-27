@@ -2,7 +2,7 @@ export let navigationLinks =  [
     {
       id: 1,
       heading: 'Home',
-      routeLink: '/'
+      routeLink: '/home'
     },
     {
       id: 2,
